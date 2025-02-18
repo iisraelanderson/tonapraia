@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento - Tô na Praia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1B3A4B;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .logo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: #FF5733;
+        }
+        .button:hover {
+            background-color: #C70039;
+        }
+        .faq {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .faq-item {
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.imgur.com/pnQjUSZ.png" alt="Tô na Praia" class="logo">
+        <h1>Bem-vindo à Pousada Tô na Praia</h1>
+        <p>Se precisar de algo, procure a camareira disponível na pousada, se preciso toque no sino da recepção. Sempre que precisar sair nós abriremos o portão para você e ao voltar, basta tocar a campainha.</p>
+        <p>Para atendimento da recepção, clique abaixo:</p>
+        
+        <a href="https://wa.me/5583987067478" class="button">💬 Falar no WhatsApp</a>
+        <a href="https://wa.me/c/5583987067478" class="button">📞 Ligar no WhatsApp</a>
+        
+        <div class="faq">
+            <h2>Dúvidas Frequentes</h2>
+            <div class="faq-item" onclick="toggleAnswer('faq1')">1. Qual horário de Check-out?</div>
+            <div id="faq1" class="faq-answer">12 Horas do dia de saída. Caso ultrapasse, precisamos verificar a disponibilidade de vagas e será acrescida uma nova diária na conta.</div>
+            
+            <div class="faq-item" onclick="toggleAnswer('faq2')">2. Horário do café da manhã?</div>
+            <div id="faq2" class="faq-answer">De 7h às 9h todos os dias.</div>
+            
+            <div class="faq-item" onclick="toggleAnswer('faq3')">3. Horário para sair e voltar?</div>
+            <div id="faq3" class="faq-answer">Não temos horário limite, a abertura do portão é 24h para entrada e saída.</div>
+            
+            <div class="faq-item" onclick="toggleAnswer('faq4')">4. Posso trazer visitas?</div>
+            <div id="faq4" class="faq-answer">Nós permitimos o recebimento de visitas em áreas comuns, como a área do café e recepção. Caso a visita venha para entrar no quarto, será acrescida uma taxa.</div>
+            
+            <div class="faq-item" onclick="toggleAnswer('faq5')">5. Demais dúvidas?</div>
+            <div id="faq5" class="faq-answer">Entre em contato em nosso WhatsApp de suporte para hospedados.</div>
+        </div>
+    </div>
+</body>
+</html>
